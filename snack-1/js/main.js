@@ -8,4 +8,4 @@ const num2 = Number(prompt("Inserisci il secondo numero"));
 //     console.log("il secondo numero é maggiore del primo")
 // }
 
-num1>num2 ? console.log(`il primo numero é maggiore del secondo`) : console.log("il secondo numero é maggiore del primo");
+num1>num2 ? console.log(num1) : console.log(num2);
