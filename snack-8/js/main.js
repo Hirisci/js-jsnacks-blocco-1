@@ -1,24 +1,19 @@
-// Consegna:
-// Scrivi un programma che stampi in console i numeri da 1 a 100.
-// MILESTONE 1
-// Per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
-// Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
-// MILESTONE 2
-// Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
-// MILESTONE 3
-// Applica uno stile differente a seconda del valore dell'indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
+// Snack 8
+
+// Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
 
 
 
-const container = document.querySelector(".container");
 
-for(let i = 1; i<=100; i++){
-    let element= document.createElement("div")
-    element.classList.add("box")
-    if(i%3===0) 
-        element.classList.add("fizz")
-    if(i%5===0) 
-        element.classList.add("buzz")
-    element.innerText = i ;
-    container.append(element);
+const listNum=[1,23,132,56,4,8,7,98,5,2,32,54,4,58,12];
+let somma = 0;
+
+for (let i = 0; i < listNum.length; i++) {
+    
+    if(i%2===1){
+        somma += listNum[i]
+    }
+    
 }
+
+console.log(somma)
