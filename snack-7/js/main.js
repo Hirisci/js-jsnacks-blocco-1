@@ -14,7 +14,6 @@ const listNameSurname = [];
 for (let i = 0; i < numPerson; i++) {
     const name = listName[Math.floor(Math.random() * listName.length)];
     const surname = listSurname[ Math.floor(Math.random() * listSurname.length)];
-    console.log(`${i+1}) ${name} ${surname}`); 
     listNameSurname.push(`${name} ${surname}`);
 }
 
