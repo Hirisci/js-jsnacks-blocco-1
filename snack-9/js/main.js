@@ -1,24 +1,24 @@
-// Consegna:
-// Scrivi un programma che stampi in console i numeri da 1 a 100.
-// MILESTONE 1
-// Per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
-// Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
-// MILESTONE 2
-// Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
-// MILESTONE 3
-// Applica uno stile differente a seconda del valore dell'indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
+// Snack 9 (Bonus)
+
+// Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all'array che ha meno elementi fino a quando ne avrà tanti quanti l'altro.
 
 
 
-const container = document.querySelector(".container");
+const listNum2 = [1,2,3,4,5,6,7,8,9,10];
+const listNum1 = [1,2,3];
+let elementEmpty= listNum1.length - listNum2.length;
 
-for(let i = 1; i<=100; i++){
-    let element= document.createElement("div")
-    element.classList.add("box")
-    if(i%3===0) 
-        element.classList.add("fizz")
-    if(i%5===0) 
-        element.classList.add("buzz")
-    element.innerText = i ;
-    container.append(element);
+if(elementEmpty>0){
+    for(let i = 0 ; i<elementEmpty; i++){
+        listNum2.push(Math.floor(Math.random()*10));
+    }
+} else {
+    for(let i = 0 ; i<(elementEmpty*-1); i++){
+        listNum1.push(Math.floor(Math.random()*10));
+    }
 }
+
+console.log(listNum1,listNum2)
+
+
+
