@@ -5,4 +5,4 @@
 const parola1 = prompt("Insersci la prima parola");
 const parola2 = prompt("Insersci la seconda parola");
 
-parola1.length >= parola2.length ? console.log(`${parola2} ${parola1}`) : console.log(`${parola1} ${parola2}`);
+parola1.length > parola2.length ? console.log(`${parola2} ${parola1}`) : parola1.length < parola2.length ? console.log(`${parola1} ${parola2}`) : console.log(`Pari`);
