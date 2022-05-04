@@ -1,24 +1,21 @@
-// Consegna:
-// Scrivi un programma che stampi in console i numeri da 1 a 100.
-// MILESTONE 1
-// Per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
-// Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
-// MILESTONE 2
-// Dato un container nel DOM, appendi un elemento html con il numero o la stringa corretta.
-// MILESTONE 3
-// Applica uno stile differente a seconda del valore dell'indice per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di 3 che di 5.
+// Snack 7
+
+// Generatore di "nomi cognomi" casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole generare una falsa lista di invitati con nome e cognome.
 
 
 
-const container = document.querySelector(".container");
+const listName = ["Angelo","Paolo", "Franco", "Valerio"]
+const listSurname= ["Bianchi","Rossi", "Verdi","Blu", "Belli"]
 
-for(let i = 1; i<=100; i++){
-    let element= document.createElement("div")
-    element.classList.add("box")
-    if(i%3===0) 
-        element.classList.add("fizz")
-    if(i%5===0) 
-        element.classList.add("buzz")
-    element.innerText = i ;
-    container.append(element);
+const numPerson = Number(prompt("Inserisci numero invitati"));
+
+const listNameSurname = [];
+
+for (let i = 0; i < numPerson; i++) {
+    const name = listName[Math.floor(Math.random() * listName.length)];
+    const surname = listSurname[ Math.floor(Math.random() * listSurname.length)];
+    console.log(`${i+1}) ${name} ${surname}`); 
+    listNameSurname.push(`${name} ${surname}`);
 }
+
+console.log(listNameSurname);
